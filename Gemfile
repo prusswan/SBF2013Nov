@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
-
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 4.0.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -41,5 +38,36 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+# gem 'sbf' #, github: 'prusswan/sbf' #, branch: 'engine-migrations'
+gem 'sbf', path: '~/Projects/sbf'
+
+gem 'settingslogic'
+
+group :development, :test do
+  gem 'debugger'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'capybara-webkit'
+
+  gem 'mysql2'
+
+  gem 'protected_attributes'
+
+  # for pushing db seed to heroku
+  gem 'heroku'
+  gem 'taps'
+  gem 'sqlite3'
+end
+
+group :development do
+  gem 'guard'
+  gem 'guard-rspec'
+
+  gem 'seed_dump'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
