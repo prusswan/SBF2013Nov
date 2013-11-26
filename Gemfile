@@ -38,8 +38,8 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# gem 'sbf' #, github: 'prusswan/sbf' #, branch: 'engine-migrations'
-gem 'sbf', path: '~/Projects/sbf'
+gem 'sbf' #, github: 'prusswan/sbf' #, branch: 'engine-migrations'
+# gem 'sbf', path: '~/Projects/sbf'
 
 gem 'settingslogic'
 
@@ -52,7 +52,7 @@ group :development, :test do
 
   gem 'mysql2'
 
-  gem 'protected_attributes'
+  # gem 'protected_attributes'
 
   # for pushing db seed to heroku
   gem 'heroku'
