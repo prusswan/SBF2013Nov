@@ -52,7 +52,7 @@ group :development, :test do
 
   gem 'mysql2'
 
-  # gem 'protected_attributes'
+  gem 'protected_attributes'
 
   # for pushing db seed to heroku
   gem 'heroku', '~> 2.40'
